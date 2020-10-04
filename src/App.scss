@@ -74,9 +74,11 @@ img {
   position: relative;
 }
 .fullpage-img {
-  width: unset;
-  max-width: unset;
   border-radius: 4px;
+  @media (min-width: 768px) {
+    width: unset;
+    max-width: unset;
+  }
 }
 
 footer {
@@ -159,6 +161,10 @@ footer {
     top: -100%;
     left: -150px;
     transform: translate(0%, 0%);
+
+    @media (max-width: 768px) {
+      left: 100px;
+    }
   }
 }
 .leaf2 {
@@ -169,8 +175,11 @@ footer {
 }
 .leaf-text {
   position: absolute;
-  top: 20%;
+  top: 30px;
   right: 0;
+  @media (min-width: 768px) {
+    top: 20%;
+  }
 }
 .App {
   position: fixed;
