@@ -73,6 +73,11 @@ img {
   object-fit: cover;
   position: relative;
 }
+.fullpage-img {
+  width: unset;
+  max-width: unset;
+  border-radius: 4px;
+}
 
 footer {
   align-self: flex-end;
@@ -124,6 +129,49 @@ footer {
   }
 }
 
+.leaf-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.bigleaf {
+  position: absolute;
+  left: 15%;
+  bottom: -50%;
+  width: calc(400px * 1.5);
+  height: calc(560px * 1.5);
+}
+.bottom {
+  top: -20%;
+  width: unset;
+  height: unset;
+}
+
+.heading {
+  // background-image: url('/src/images/Leaf1.svg');
+  // height: 100%;
+  position: relative;
+  svg {
+    position: absolute;
+  }
+  .leaf1 {
+    top: -100%;
+    left: -150px;
+    transform: translate(0%, 0%);
+  }
+}
+.leaf2 {
+  position: absolute;
+  // top: 50%;
+  // left: -10%;
+  transform: translateY(-50%);
+}
+.leaf-text {
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
 .App {
   position: fixed;
   top: 0;

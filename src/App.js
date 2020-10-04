@@ -6,7 +6,8 @@ import Fullpage, {
 import useWindowSize from './hooks/useWindowSize';
 import './App.scss';
 import { data as people } from './data';
-import { useState } from 'react';
+import { Leaf1, Leaf2, Leaf3 } from './leafs/leafs';
+
 // import LogoMot from '../public/LogoMot.svg';
 // import LogoFh from '../public/fhlogo.svg';
 
@@ -70,7 +71,12 @@ function App() {
 
   return (
     <div ref={app}>
-      {/* <div> */}
+      {/* <Leaf2 width="100vw" height="200vh" style={{ overflow: 'hidden' }} /> */}
+      {/* <div className="leaf-container">
+        <Leaf1 />
+        <Leaf1 />
+        <Leaf1 />
+      </div> */}
       <Fullpage>
         <FullPageSections ref={scrollContainer}>
           <FullpageSection
@@ -79,6 +85,7 @@ function App() {
               height: '100vh',
               display: 'grid',
               placeItems: 'center',
+              position: 'relative',
             }}
           >
             <h1>
@@ -86,6 +93,7 @@ function App() {
               <br />
               Das Sind Wir!
             </h1>
+            <Leaf2 className="bigleaf" />
           </FullpageSection>
           <FullpageSection
             style={{
@@ -116,7 +124,7 @@ function App() {
               </ol>
             </div>
           </FullpageSection>
-          {people.map(({ name, writtenBy, img, text }) => (
+          {people.map(({ name, writtenBy, img, text }, idx) => (
             <React.Fragment key={name}>
               <FullpageSection
                 style={{
@@ -126,9 +134,10 @@ function App() {
                   height: '100vh',
                 }}
               >
-                <div>
+                <div className="heading">
                   <h2 dangerouslySetInnerHTML={{ __html: name }}></h2>
                   <p className="writtenBy">beschrieben von {writtenBy}</p>
+                  <Leaf1 className="leaf1" />
                 </div>
               </FullpageSection>
               <FullpageSection
@@ -139,8 +148,10 @@ function App() {
                   height: '100vh',
                 }}
               >
-                {/* <div> */}
-                <img src={img} alt={name} />
+                {/* <div className="image"> */}
+                <img src={img} alt={name} className="fullpage-img" />
+                {/* <Leaf3 className="leaf2 left" /> */}
+                {/* <Leaf3 className="leaf2 right" /> */}
                 {/* </div> */}
               </FullpageSection>
               <FullpageSection
@@ -149,12 +160,15 @@ function App() {
                   display: 'grid',
                   placeItems: 'center',
                   height: '100vh',
+                  position: 'relative',
                 }}
               >
                 <div className="hero">
                   <p dangerouslySetInnerHTML={{ __html: text }}></p>
                 </div>
+                <Leaf3 className="leaf-text" />
               </FullpageSection>
+              {/* {!(idx % 2) && <Leaf2 />} */}
             </React.Fragment>
           ))}
           <FullpageSection
@@ -163,8 +177,10 @@ function App() {
               display: 'grid',
               placeItems: 'start',
               height: '80vh',
+              position: 'relative',
             }}
           >
+            <Leaf2 className="bigleaf bottom" />
             <footer>
               <p>
                 A website by{' '}
