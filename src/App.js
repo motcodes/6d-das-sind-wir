@@ -117,7 +117,7 @@ function App() {
             <div className="hero">
               <ol>
                 <li>Julia Margreiter</li>
-                <li>Luca Mathis</li>
+                <li>Luca Mathies</li>
                 <li>Juliane Mohr</li>
                 <li>Renato Mendes Nunes</li>
                 <li>Matthias Oberholzer</li>
