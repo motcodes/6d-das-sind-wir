@@ -152,7 +152,6 @@ footer {
 
 .heading {
   // background-image: url('/src/images/Leaf1.svg');
-  // height: 100%;
   position: relative;
   svg {
     position: absolute;
@@ -161,8 +160,10 @@ footer {
     top: -100%;
     left: -150px;
     transform: translate(0%, 0%);
-
-    @media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    .leaf1 {
       left: 100px;
     }
   }
