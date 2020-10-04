@@ -89,7 +89,7 @@ function App() {
             }}
           >
             <h1>
-              6D
+              D1
               <br />
               Das Sind Wir!
             </h1>
@@ -262,7 +262,7 @@ const skeyScroll = ({ app, scrollContainer }) => (
     <div ref={scrollContainer} className="scroll">
       <div className="hero">
         <h1>
-          6D
+          D1
           <br />
           Das Sind Wir!
         </h1>
